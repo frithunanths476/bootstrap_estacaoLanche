@@ -1,0 +1,48 @@
+@media(max-width:850px){
+    #banner{
+        height: 50vh;
+    }
+}
+@media(max-width:500px){
+    #banner{
+        height: 50vh;
+    }
+    #logo {
+        width: 7vw;
+        margin-left: 3vw;
+    }
+    #grid{
+        width: 50vw;
+    }
+    #grid p {
+        margin-bottom: 0;
+        margin-left: 2vw;
+        font-size: 4vw;
+    }
+    #combo p, #hamburguer p {
+        font-size: 2.5vw;
+    }
+    #hamburguer h5,
+    #combo h5 {
+        font-size: 4.5vw;
+    }
+    #hamburguer,
+    #combo {
+        height: 30vw;
+        width: 80vw;
+    }
+}
+@media(max-width:500px){
+    #banner h2 {
+        font-size: 7vw;
+    }
+    #banner h3, #banner button {
+        margin-top: 2vw;
+        font-size: 3.5vw;
+    }
+    
+    #banner button {
+        padding: 2.5vw;
+        font-size: 2.5vw;
+    }
+}

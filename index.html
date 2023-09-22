@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Estação do Lanche</title>
+        <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+
+    <style>
+      p {
+          margin: 0;
+      }
+      
+      ::-webkit-scrollbar{
+          width: 0;
+      }
+
+      iframe {
+          width: 100%;
+      }
+
+      .hover-img {
+          transition: all 0.5s;
+          opacity: 0.6;
+      }
+
+      .hover-img:hover {
+          transform: scale(1.05);
+          opacity: 1;
+      }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg amarelo">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <h1 id="grid">
+                <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M61.1 224C45 224 32 211 32 194.9c0-1.9 .2-3.7 .6-5.6C37.9 168.3 78.8 32 256 32s218.1 136.3 223.4 157.3c.5 1.9 .6 3.7 .6 5.6c0 16.1-13 29.1-29.1 29.1H61.1zM144 128a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm240 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32zM272 96a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zM16 304c0-26.5 21.5-48 48-48H448c26.5 0 48 21.5 48 48s-21.5 48-48 48H64c-26.5 0-48-21.5-48-48zm16 96c0-8.8 7.2-16 16-16H464c8.8 0 16 7.2 16 16v16c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V400z"/></svg>
+                <p>Estação do Lanche</p>
+            </h1>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Início</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Produtos</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Contato</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                    <button id="whats" class="btn btn-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                        Fale Conosco
+                    </button>
+                </a>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12" id="header" style="padding-right: 0; padding-left: 0;">
+                <div id="banner">
+                    <div id="fundo">
+
+                    </div>
+                    <div id="textos">
+                        <h2><strong>Uma delícia de sabor</strong></h2>
+                        <h3>Para os clientes mais exigentes.</h3>
+                        <a href="#fundoImg"><button>VER MAIS <strong>PRODUTOS</strong></button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5" id="amarelo" >
+        <div class="row" style="display: flex;align-items: center;justify-content: center; gap: 5vw;">
+            <div class="row" id="arruma">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                  <div class="card">
+                    <div class="card-body" id="hamburguer">
+                      <h5 class="card-title">Hambúrguer</h5>
+                      <p class="card-text">do tamanho da sua fome</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body" id="combo">
+                      <h5 class="card-title">Combos</h5>
+                      <p class="card-text">para toda fámilia</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- ==================================================================================== -->
+    <div class="container-fluid text-center">
+
+      <div class="row">
+          <div class="col-4" id="fundoImg" ><img src="img/cao - cachorro.jpeg" alt="" style="width: 27vw;border-radius: 15px;"></div>
+          
+          <div class="col-5" id="fundoTxt1">
+              <div class="row" style="position: relative; top: 50%; transform: translateY(-50%); ">
+                  <div class="col-12"><h3 class="titulo">Smash burguer fenomenal </h3></div>
+                  <div class="col-12"><p class="descricao">Pão de gergilin, hamburguer 180g e muito queijo cheddar.</p></div>
+                  <div class="col"><p class="preco">R$ 18,90</p></div>
+              </div>
+          </div>
+
+          <div class="col-3" id="fundoBotao1">
+              <a href="https://web.whatsapp.com"><button class="botao">EU QUERO!</button></a>
+          </div>
+      </div>
+
+
+      <div class="row">
+          <div class="col-4" id="fundoImgBco"><img src="img/cao - cachorro (1).png" alt="" style="width: 27vw;"></div>
+          
+          <div class="col-5" id="fundoTxt2">
+              <div class="row" style="position: relative; top: 50%; transform: translateY(-50%); ">
+                  <div class="col-12"><h3 class="titulo">Extremo picante burguer </h3></div>
+                  <div class="col-12"><p class="descricao">Pão de gergilin, hamburguer 180g e muito queijo cheddar, salada e molho especial de pimenta.</p></div>
+                  <div class="col"><p class="preco">R$ 24,90</p></div>
+              </div>
+          </div>
+
+          <div class="col-3" id="fundoBotao2">
+              <a href="https://web.whatsapp.com"><button class="botao">EU QUERO!</button></a>
+          </div>
+
+      </div>
+
+
+      <div class="row">
+          <div class="col-4" id="fundoImg"><img src="img/cao - cachorro (2).jpeg" alt="" style="width: 27vw; border-radius: 15px;"></div>
+          
+          <div class="col-5" id="fundoTxt1">
+              <div class="row" style="position: relative; top: 50%; transform: translateY(-50%); ">
+                  <div class="col-12"><h3 class="titulo">Combo Picles </h3></div>
+                  <div class="col-12"><p class="descricao">Pão de gergilin, hamburguer 180g e salada com picles. Acompanha Batata de 250g e Refrigerante de 350ml</p></div>
+                  <div class="col"><p class="preco">R$ 39,90</p></div>
+              </div>
+          </div>
+
+          <div class="col-3" id="fundoBotao1">
+              <a href="https://web.whatsapp.com"><button class="botao">EU QUERO!</button></a>
+          </div>
+      </div>
+    <!-- ============================================================================================ -->
+    <div class="row pt-2 pb-2" style="background-color: whitesmoke;">
+            
+      <div class="col-sm-5"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14869.342098921334!2d-50.331992897839356!3d-21.29775455694184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1694807160038!5m2!1spt-BR!2sbr" width="600" height="450" style="border: 2px solid black; border-radius: 50px; margin-top: 10px; margin-bottom: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <div class="col-sm-7" style="min-height: 450px;">
+          <label for="exampleFormControlTextarea1" style="margin-right: 537px; margin-bottom: 60px; color: #FF0000; font-size: 25px; font-weight: bolder; text-decoration: underline; text-decoration-color: #FFD704; text-decoration-style: 1px solid;" class="form-label">Fale Conosco</label>
+          <form action="">
+              <div class="form-group mb-3">
+                  <label for="exampleFormControlInput1" class="form-label" style="margin-right: 560px;">Informe seu nome</label>
+                  <input type="text" class="form-control" style="border: 1.5px solid black;" id="exampleFormControlInput1" placeholder="ex: juninho">
+                </div>
+                <div class="form-group mb-3">
+                  <label for="exampleFormControlInput1" style="display: block; margin-right: 534px;" class="form-label">Telefone para Contato</label>
+                  <input type="tel" class="form-control" style="border: 1.5px solid black;" id="exampleFormControlInput1" placeholder="EX: (18)991234-12345">
+                </div>
+                <div class="form-group mb-3">
+                  <label for="exampleFormControlTextarea1" style="margin-right: 582px;" class="form-label">Sua mensagem</label>
+                  <textarea class="form-control" style="border: 1.5px solid black;" id="exampleFormControlTextarea1" rows="3" placeholder="Informe aqui a sua mensagem"></textarea>
+                </div>
+               <div class="form-group">
+                   <button type="button" class="btn btn-danger" style="color: #FFD704; width: 200px; border-radius: 50px;">Enviar</button>
+               </div>
+          </form>
+      </div>
+
+  </div>
+
+  <div class="row pt-2 pb-2" style="background-color: #8A1313CC;">
+  
+      <div class="col-sm-4">
+          <p style="font-size: xx-large; color: #FFD704; font-weight: bolder;">Segue a <br> Gente</p>
+          <p style="color: whitesmoke; margin: 30px;"><img src="img/instagram.svg" alt="logo_instagram" style="height: 20px; margin-right: 10px;">estacaolanche</p>
+          <p style="color: whitesmoke; margin: 30px;"><img src="img/youtube.svg" alt="logo_youtube" style="height: 20px; margin-right: 10px;">estacaolanchetv</p>
+          <p style="color: whitesmoke; margin: 30px;"><img src="img/tiktok.svg" alt="logo_tiktok" style="height: 20px; margin-right: 10px;">estacaolanche</p>
+      </div>
+      
+      <div class="col-sm-8">
+          <div class="row pt-1 pb-1 g-2">
+              <div class="col-sm-6"><p class="hover-img" style="background-image: url(./img/sala_varias_plantas.jpeg); height: 160px; background-size: cover;"></p></div>
+              <div class="col-sm-6"><p class="hover-img" style="background-image: url(./img/balcao.jpeg); height: 160px; background-size: cover;"></p></div>
+
+              <div class="col-sm-4"><p class="hover-img" style="background-image: url(./img/cadeiras.jpeg); height: 160px; background-size: cover;"></p></div>
+              <div class="col-sm-4"><p class="hover-img" style="background-image: url(./img/cara_comendo.jpeg); height: 160px; background-size: cover;"></p></div>
+              <div class="col-sm-4"><p class="hover-img" style="background-image: url(./img/entrega.jpeg); height: 160px; background-size: cover;"></p></div>
+          </div>
+      </div>
+
+  </div>
+
+<!--Footer-->
+
+  <div class="row pt-2 pb-2" style="background-color: #FFD704; min-height: 75px;">
+      <div class="col-sm-5" style="height: 33px; margin-top: 15px;"><p><img src="img/burger-solid.svg" alt="burger" style="height: 20px; margin-right: 10px;">Estação do Lanche</p></div>
+      <div class="col-sm-7" style="min-height: 33px;"><p>(18) 99123-1234 / (18) 3636-3636</p><p>Rua Lorem Ipsum Nº 123, Centro - Birigui / SP</p></div>
+  </div>
+
+</div>
+    
+</body>
+</html>

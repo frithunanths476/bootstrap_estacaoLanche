@@ -1,0 +1,223 @@
+.amarelo {
+    background-color: #FFD704;
+    align-items: center;
+    height: 15vh;
+}
+.navbar-nav{
+    align-items: center;
+}
+
+#topo{
+    background-color: #FFD704;
+    display: flex;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 3fr 4fr 0.5fr;
+}
+#logo1{
+    height: 7vw;
+    display: flex;
+    align-items: center;
+}
+#logo{
+    width: 5vw;
+    margin-left: 2vw;
+
+}
+.amarelo h1{
+    font-size: 2vw;
+    margin-left: 1vw;
+}
+#banner{
+    background-image: url(img/banner.png);
+    height: 85vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.412);
+    grid-template-rows: 0fr 1fr;
+}
+#nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#whats{
+    border-radius: 100px;
+}
+#whats svg{
+    width: 2vw;
+    fill: white;
+}
+/* #fundo{
+    background-color: rgba(0, 0, 0, 0.412);
+    width: 98vw;
+    height: 65vw;
+    position: relative;
+} */
+#textos{
+    z-index: 1;
+}
+#banner h3,
+#banner button{
+    margin-top: 2vw;
+    font-size: 2.5vw;
+
+}
+#banner h2{
+    font-size: 5vw;
+}
+#banner button{
+    background-color: #DE0A0A;
+    border: none;
+    color: white;
+    border-radius: 1000px;
+    padding: 1.5vw;
+    font-size: 1.5vw;
+}
+#grid{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    width: 25vw;
+}
+#grid p {
+    margin-bottom: 0;
+    margin-left: 1vw;
+    font-size: 2vw;
+}
+.container{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.container, .container-sm {
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        gap: 10vw;
+    }
+
+#combo{
+    background-image: url(img/combo.PNG);
+    text-align: end;
+
+}
+#hamburguer{
+    background-image: url(img/hamburguer.PNG);
+    text-align: start;
+    margin-right: 2.5vw;
+}
+#combo h5,
+#hamburguer h5{
+    font-size: 2.5vw;
+}
+#combo p,
+#hamburguer p{
+    font-size: 1.5vw;
+}
+#amarelo{
+    background-color: #FFD704;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#combo,
+#hamburguer{
+    background-size: cover;
+    background-position: center;
+    height: 15vw;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 10px;
+    align-items: center;
+    padding-top: 10%;
+    transition: 1s;
+    width: 40vw;
+    cursor: pointer;
+}
+#combo:hover,
+#hamburguer:hover{
+    transform: scale(1.05);
+
+}
+.mt-5 {
+    padding-top: 3rem!important;
+    margin-top: 0 !important;
+    padding-bottom: 3rem!important;
+
+}
+.card{
+    border: none;
+    border-radius: 10px;
+    width: 40vw;
+}
+#arruma{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    color: red;
+    text-align: start; 
+    font-size: 2vw;
+}
+
+.descricao{
+    text-align: start; 
+    font-size: 1.3vw;
+}
+
+.preco{
+    text-align: start; 
+    font-size: 1.8vw
+}
+
+.botao{
+    border: none; 
+    border-radius: 2vw; 
+    font-size: 1.3vw; 
+    color: #FFD704; 
+    background-color: red; 
+    padding: 1vw; 
+    position: relative; 
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+#fundoImg{
+    background-color: rgba(255, 215, 4, 0.12); 
+    padding: 40px ;
+}
+
+#fundoTxt1{
+    background-color: rgba(255, 215, 4, 0.12); 
+    padding-left: 10vw;
+}
+
+#fundoImgBco{
+    background-color: rgb(255, 255, 255); 
+    padding: 40px ;
+}
+
+#fundoTxt2{
+    background-color: rgb(255, 255, 255); 
+    padding-left: 10vw;
+}
+
+#fundoBotao1{
+    background-color: rgba(255, 215, 4, 0.12);
+}
+
+#fundoBotao2{
+    background-color: rgb(255, 255, 255); 
+}
+
